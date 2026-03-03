@@ -175,6 +175,20 @@ These include public transit and walking time.
 - Check that venue data loaded correctly
 - See browser console for specific errors
 
+### Accessing browser consoles
+
+- **Popup**: Right-click the extension icon → Inspect
+- **Content script**: Open a Berlinale film page → F12 → Console
+- **Service worker**: `chrome://extensions/` → click "service worker" link
+
+```javascript
+// Check stored data (run in popup console)
+chrome.storage.local.get(null, (data) => console.log(data));
+
+// Clear all data
+chrome.storage.local.clear(() => console.log('Cleared'));
+```
+
 ## Development
 
 See `CLAUDE.md` for development guidelines, code style, and architectural decisions.
