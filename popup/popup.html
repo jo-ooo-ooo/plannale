@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plannale</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <!-- Header -->
+    <header class="popup-header">
+      <h1>Plannale</h1>
+      <p class="subtitle">Plan your Berlinale with Plannale</p>
+    </header>
+
+    <!-- Tab Navigation -->
+    <nav class="tabs">
+      <button class="tab-button active" data-tab="films">Films</button>
+      <button class="tab-button" data-tab="schedule">Schedule</button>
+      <button class="tab-button" data-tab="settings">Settings</button>
+    </nav>
+
+    <!-- Tab Content -->
+    <div class="tab-content">
+      <!-- Films Tab -->
+      <div id="films-tab" class="tab-panel active">
+        <div class="tab-header">
+          <h2>My Films</h2>
+          <div class="header-actions">
+            <button id="clear-all-btn" class="btn btn-ghost btn-sm">Clear All</button>
+          </div>
+        </div>
+
+        <div id="films-list" class="films-list">
+          <!-- Films will be inserted here -->
+        </div>
+
+        <div id="films-empty" class="empty-state" style="display: none;">
+          <div class="empty-icon">🎬</div>
+          <p>No films added yet</p>
+          <p class="hint">Visit <a href="https://www.berlinale.de/en/programme/film-favorites.html" target="_blank">your Berlinale favorites</a> and click "Sync with Plannale" to get started.</p>
+        </div>
+
+        <div class="tab-footer">
+          <button id="generate-schedule-btn" class="btn btn-primary">Generate Schedule</button>
+        </div>
+      </div>
+
+      <!-- Schedule Tab -->
+      <div id="schedule-tab" class="tab-panel">
+        <div class="tab-header">
+          <h2>Your Schedule</h2>
+          <button id="regenerate-schedule-btn" class="btn btn-secondary btn-sm">Regenerate</button>
+        </div>
+
+        <div id="schedule-content" class="schedule-content">
+          <!-- Schedule will be inserted here -->
+        </div>
+
+        <div id="schedule-empty" class="empty-state" style="display: none;">
+          <div class="empty-icon">📅</div>
+          <p>No schedule generated yet</p>
+          <p class="hint">Add films and click "Generate Schedule" in the Films tab.</p>
+        </div>
+      </div>
+
+      <!-- Settings Tab -->
+      <div id="settings-tab" class="tab-panel">
+        <div class="tab-header">
+          <h2>Preferences</h2>
+        </div>
+
+        <div class="settings-content">
+          <div class="setting-group">
+            <label for="max-films-per-day">Maximum films per day</label>
+            <select id="max-films-per-day" class="setting-select">
+              <option value="1">1 film</option>
+              <option value="2">2 films</option>
+              <option value="3" selected>3 films</option>
+              <option value="4">4 films</option>
+              <option value="5">5 films</option>
+            </select>
+          </div>
+
+          <div class="setting-group">
+            <label for="break-time">Break time between films</label>
+            <select id="break-time" class="setting-select">
+              <option value="0">Just enough to get there – Only travel time</option>
+              <option value="15" selected>Quick break (+15 min) – Time for coffee/bathroom</option>
+              <option value="30">Comfortable (+30 min) – Time to grab a snack</option>
+              <option value="60">Leisurely (+1 hour) – Full break between films</option>
+            </select>
+          </div>
+
+          <div class="setting-group">
+            <label class="checkbox-setting">
+              <input type="checkbox" id="prioritize-publikumstag">
+              <span class="checkbox-label">
+                <strong>Prioritize Publikumstag (Feb 22)</strong>
+                <span class="checkbox-hint">Tickets are €11 instead of €15-20 (except Generation section)</span>
+              </span>
+            </label>
+          </div>
+
+          <div class="setting-group">
+            <details class="collapsible-setting">
+              <summary>
+                <span class="setting-label">Favorite cinemas</span>
+                <span id="favorite-cinemas-count" class="setting-count">None selected</span>
+              </summary>
+              <p class="hint">Screenings at favorite cinemas will be prioritized when scheduling.</p>
+              <div id="favorite-cinemas-list" class="cinema-list">
+                <!-- Cinemas will be inserted here -->
+              </div>
+            </details>
+          </div>
+
+          <div class="setting-group">
+            <label>Available Days</label>
+            <p class="hint">Select days and times you're available.</p>
+            <div id="available-days-list" class="available-days-list">
+              <!-- Available days will be inserted here -->
+            </div>
+          </div>
+
+          <div class="tab-footer">
+            <button id="save-settings-btn" class="btn btn-primary">Save Preferences</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay" style="display: none;">
+      <div class="spinner"></div>
+      <p id="loading-text">Loading...</p>
+    </div>
+  </div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

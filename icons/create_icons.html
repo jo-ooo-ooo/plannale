@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Generate Icons</title>
+</head>
+<body>
+  <h2>Icon Generator</h2>
+  <p>Right-click each canvas below and "Save Image As..." to create the icons:</p>
+  
+  <div>
+    <h3>icon16.png</h3>
+    <canvas id="icon16" width="16" height="16"></canvas>
+  </div>
+  
+  <div>
+    <h3>icon48.png</h3>
+    <canvas id="icon48" width="48" height="48"></canvas>
+  </div>
+  
+  <div>
+    <h3>icon128.png</h3>
+    <canvas id="icon128" width="128" height="128"></canvas>
+  </div>
+
+  <script>
+    function drawIcon(canvasId, size) {
+      const canvas = document.getElementById(canvasId);
+      const ctx = canvas.getContext('2d');
+      
+      // Background
+      ctx.fillStyle = '#e31c23';
+      ctx.fillRect(0, 0, size, size);
+      
+      // Film strip design
+      ctx.fillStyle = '#ffffff';
+      
+      // Simplified film icon
+      const centerX = size / 2;
+      const centerY = size / 2;
+      const rectWidth = size * 0.6;
+      const rectHeight = size * 0.5;
+      
+      ctx.fillRect(centerX - rectWidth/2, centerY - rectHeight/2, rectWidth, rectHeight);
+      
+      // Film holes
+      ctx.fillStyle = '#e31c23';
+      const holeSize = size * 0.08;
+      const holeY1 = centerY - rectHeight/2 + holeSize;
+      const holeY2 = centerY + rectHeight/2 - holeSize;
+      
+      ctx.fillRect(centerX - rectWidth/2 + holeSize, holeY1, holeSize, holeSize);
+      ctx.fillRect(centerX + rectWidth/2 - holeSize * 2, holeY1, holeSize, holeSize);
+      ctx.fillRect(centerX - rectWidth/2 + holeSize, holeY2, holeSize, holeSize);
+      ctx.fillRect(centerX + rectWidth/2 - holeSize * 2, holeY2, holeSize, holeSize);
+    }
+    
+    drawIcon('icon16', 16);
+    drawIcon('icon48', 48);
+    drawIcon('icon128', 128);
+  </script>
+</body>
+</html>

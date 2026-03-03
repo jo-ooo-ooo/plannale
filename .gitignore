@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# Development notes (optional - remove lines if you want to keep them)
+DUPLICATE_BUTTONS_FIX.txt
+RELOAD_INSTRUCTIONS.txt
+SPA_FIX_NOTES.txt
+UPDATE_NOTES.txt

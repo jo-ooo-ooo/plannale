@@ -1,0 +1,176 @@
+{
+  "venues": {
+    "akademie_der_kuenste": {
+      "name": "Akademie der Künste",
+      "district": "Mitte",
+      "address": "Hanseatenweg 10",
+      "coordinates": [52.5165, 13.3485]
+    },
+    "bali_kino": {
+      "name": "Bali Kino",
+      "district": "Zehlendorf",
+      "address": "Teltower Damm 33",
+      "coordinates": [52.4345, 13.2585]
+    },
+    "berlinale_palast": {
+      "name": "Berlinale Palast",
+      "district": "Mitte",
+      "address": "Marlene-Dietrich-Platz 1",
+      "coordinates": [52.5095, 13.3735]
+    },
+    "bluemax_theater": {
+      "name": "Bluemax Theater",
+      "district": "Mitte",
+      "address": "Marlene-Dietrich-Platz 4",
+      "coordinates": [52.5095, 13.3745]
+    },
+    "cinemaxx": {
+      "name": "CinemaxX",
+      "district": "Mitte",
+      "address": "Potsdamer Straße 5",
+      "coordinates": [52.5095, 13.3765]
+    },
+    "cinema_paris": {
+      "name": "Cinema Paris",
+      "district": "Charlottenburg",
+      "address": "Kurfürstendamm 211",
+      "coordinates": [52.5035, 13.3275]
+    },
+    "colosseum": {
+      "name": "Colosseum",
+      "district": "Prenzlauer Berg",
+      "address": "Schönhauser Allee 123",
+      "coordinates": [52.5358, 13.4135]
+    },
+    "cubix": {
+      "name": "Cubix",
+      "district": "Mitte",
+      "address": "Rathausstraße 1",
+      "coordinates": [52.5193, 13.4135]
+    },
+    "delphi_filmpalast": {
+      "name": "Delphi Filmpalast",
+      "district": "Charlottenburg",
+      "address": "Kantstraße 12a",
+      "coordinates": [52.5048, 13.3255]
+    },
+    "deutsche_kinemathek": {
+      "name": "Deutsche Kinemathek",
+      "district": "Mitte",
+      "address": "Potsdamer Straße 2",
+      "coordinates": [52.5095, 13.3755]
+    },
+    "filmtheater_am_friedrichshain": {
+      "name": "Filmtheater am Friedrichshain",
+      "district": "Friedrichshain",
+      "address": "Bötzowstraße 1-5",
+      "coordinates": [52.5265, 13.4345]
+    },
+    "haus_der_berliner_festspiele": {
+      "name": "Haus der Berliner Festspiele",
+      "district": "Wilmersdorf",
+      "address": "Schaperstraße 24",
+      "coordinates": [52.4975, 13.3215]
+    },
+    "hkw": {
+      "name": "Haus der Kulturen der Welt",
+      "district": "Mitte",
+      "address": "John-Foster-Dulles-Allee 10",
+      "coordinates": [52.5186, 13.3478]
+    },
+    "kino_casablanca": {
+      "name": "Kino Casablanca",
+      "district": "Friedrichshain",
+      "address": "Friedenstraße 12",
+      "coordinates": [52.5155, 13.4385]
+    },
+    "radialsystem": {
+      "name": "Radialsystem",
+      "district": "Friedrichshain",
+      "address": "Holzmarktstraße 33",
+      "coordinates": [52.5105, 13.4285]
+    },
+    "silent_green": {
+      "name": "Silent Green",
+      "district": "Wedding",
+      "address": "Gerichtstraße 35",
+      "coordinates": [52.5465, 13.3635]
+    },
+    "sinema_transtopia": {
+      "name": "Sinema Transtopia",
+      "district": "Moabit",
+      "address": "Sickingenstraße 71",
+      "coordinates": [52.5305, 13.3405]
+    },
+    "uber_eats_music_hall": {
+      "name": "Uber Eats Music Hall",
+      "district": "Friedrichshain",
+      "address": "Mercedes-Platz 1",
+      "coordinates": [52.5065, 13.4425]
+    },
+    "urania": {
+      "name": "Urania",
+      "district": "Schöneberg",
+      "address": "An der Urania 17",
+      "coordinates": [52.5025, 13.3485]
+    },
+    "xenon_kino": {
+      "name": "Xenon Kino",
+      "district": "Schöneberg",
+      "address": "Kolonnenstraße 5",
+      "coordinates": [52.4885, 13.3555]
+    },
+    "yorck": {
+      "name": "Yorck",
+      "district": "Kreuzberg",
+      "address": "Yorckstraße 86",
+      "coordinates": [52.4925, 13.3785]
+    },
+    "zoo_palast": {
+      "name": "Zoo Palast",
+      "district": "Charlottenburg",
+      "address": "Hardenbergstraße 29A",
+      "coordinates": [52.5065, 13.3325]
+    }
+  },
+  "travelTimes": {
+    "_comment": "Travel times in minutes. Missing pairs default to 30 minutes.",
+    "potsdamer_platz_cluster": {
+      "_note": "Berlinale Palast, CinemaxX, Bluemax, Deutsche Kinemathek are all at Potsdamer Platz - 5 min between them"
+    },
+    "charlottenburg_cluster": {
+      "_note": "Zoo Palast, Delphi Filmpalast, Cinema Paris are close - 10-15 min between them"
+    },
+    "zoo_palast": {
+      "zoo_palast": 0,
+      "delphi_filmpalast": 10,
+      "cinema_paris": 10,
+      "berlinale_palast": 25,
+      "cinemaxx": 25,
+      "urania": 15,
+      "haus_der_berliner_festspiele": 15
+    },
+    "berlinale_palast": {
+      "berlinale_palast": 0,
+      "cinemaxx": 5,
+      "bluemax_theater": 5,
+      "deutsche_kinemathek": 5,
+      "hkw": 15,
+      "zoo_palast": 25,
+      "cubix": 25
+    },
+    "cubix": {
+      "cubix": 0,
+      "filmtheater_am_friedrichshain": 15,
+      "radialsystem": 15,
+      "kino_casablanca": 15,
+      "uber_eats_music_hall": 20,
+      "colosseum": 20
+    },
+    "colosseum": {
+      "colosseum": 0,
+      "silent_green": 20,
+      "cubix": 20
+    }
+  }
+}
