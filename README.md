@@ -1,6 +1,18 @@
-# Film Festival Planner - Chrome Extension
+# Plannale - Film Festival Planner Chrome Extension
 
-A Chrome extension for optimizing film festival schedules with smart scheduling and travel time consideration. MVP targets Berlinale 2026.
+A Chrome extension for optimizing film festival schedules with smart scheduling and travel time consideration. Built for Berlinale 2026.
+
+https://github.com/user-attachments/assets/Plannale.mp4
+
+## Background
+
+I've experimented with vibe coding before, but most of those projects ended up unfinished in v0 or Lovable. This time, I built something that solves a real problem for myself — and it actually works end-to-end.
+
+Every year at Berlinale, I spend hours planning which films to watch — tracking must-see screenings, juggling overlapping time slots, and trying to fit as many films as possible into ten days. This year, I decided to build a tool for it.
+
+I used Cursor and Claude Code to build this Chrome extension from scratch. The PM side was straightforward: I wrote a PRD with goals and user stories, then used Plan mode to identify edge cases. The implementation had its challenges — Claude Code initially scraped incorrect film durations from the Berlinale site, so I had to find better data sources. The scheduling algorithm also took several iterations to handle real-world constraints flexibly.
+
+The result: I can sync my favorited films, generate optimized schedules, pin films to specific time slots, and regenerate with different constraints. Is the target audience tiny? Absolutely. But this was about building something useful, learning the workflow, and having fun doing it.
 
 ## Features
 
