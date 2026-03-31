@@ -2,7 +2,7 @@
 
 A Chrome extension for optimizing film festival schedules with smart scheduling and travel time consideration. Built for Berlinale 2026.
 
-https://github.com/user-attachments/assets/Plannale.mp4
+https://github.com/user-attachments/assets/5f2238d0-c3cc-480e-b58d-17fe7071ac2e
 
 ## Background
 
